@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>./Capres Facts | Paslon No. Urut 03</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="flex flex-col justify-center items-center">
+        <div class="max-w-screen-xl mt-10">
+            <div class="mb-10 sticky top-0 bg-white z-50 w-full flex justify-between items-center px-6 py-4 shadow-lg">
+                <div class="">
+                    <h1 class="text-6xl font-bold mr-auto">./Capres Facts</h1>
+                </div>
+                <button id="hamburger-btn" class="block focus:outline-none">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>                
+                <div id="menu" class="menu drop-shadow-md">
+                    <ul class="space-y-4 text-center">
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./index..html" class="text-gray-600 hover:text-gray-900 text-3xl">Home</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon01.html" class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 01</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon02.html" class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 02</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon03.html" class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 03</a></li>
+                        <!-- Tambahkan lebih banyak item menu sesuai kebutuhan -->
+                    </ul>
+                </div>
+            </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const hamburgerBtn = document.getElementById('hamburger-btn');
+                    const menu = document.getElementById('menu');
+            
+                    hamburgerBtn.addEventListener('click', function () {
+                        menu.classList.toggle('active');
+                        hamburgerBtn.classList.toggle('open');
+                    });
+                });
+            </script>
+
+            <div class="flex items-center justify-center mb-10">
+
+                <div class="flex justify-center items-center mr-20">
+                    <div class="flex flex-col items-center">
+                        <img src="img/paslon3.jpeg" alt="" class="mb-4">
+                        <div class="flex items-center justify-center">
+                            <img src="https://infopemilu.kpu.go.id//berkas-sipol/parpol/profil/gambar_parpol/1656305039_LOGO%20PDI%20PERJUANGAN.png"
+                                alt="" class="w-10 mx-2" title="PDI Perjuangan">
+                            <img src="https://infopemilu.kpu.go.id/berkas-sipol/parpol/profil/gambar_parpol/1658455987_Logo%20PPP.png"
+                                alt="" class="w-10  mx-2" title="PPP">
+                            <img src="https://infopemilu.kpu.go.id/berkas-sipol/parpol/profil/gambar_parpol/1659263373_hanura_10x10.png"
+                                alt="" class="w-10  mx-2" title="Partai HANURA">
+                            <img src="https://infopemilu.kpu.go.id/berkas-sipol/parpol/profil/gambar_parpol/1656144884_LOGO%20PARTAI%20PERINDO%2010x10%20cm%20(RGB).png"
+                                alt="" class="w-10  mx-2" title="Partai Perindo">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="biografi-paslon">
+                    <div class="mb-5">
+                        <h1 class="font-bold text-3xl">Ganjar Pranowo (Calon Presiden)</h1>
+                        <ul>
+                            <li><strong>Nama Lengkap:</strong> Ganjar Pranowo</li>
+                            <li><strong>Tempat, Tanggal Lahir:</strong> Karang Anyar, 28 Oktober 1968</li>
+                            <li><strong>Usia:</strong> 54 tahun</li>
+                            <li><strong>Karir:</strong>
+                                <ul>
+                                    <li>• Anggota DPR RI Fraksi PDI Perjuangan (2004-2009 dan 2009-2013)</li>
+                                    <li>• Gubernur Jawa Tengah(2013-2023)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-2xl">Mahfud MD (Calon Wakil Presiden)</h1>
+                        <ul>
+                            <li><strong>Nama Lengkap:</strong> Mohammad Mahfud Mahmodin</li>
+                            <li><strong>Tempat, Tanggal Lahir:</strong> Madura, 13 Mei 1957</li>
+                            <li><strong>Usia:</strong> 66 tahun</li>
+                            <li><strong>Karir:</strong>
+                                <ul>
+                                    <li>• Menteri Pertahanan Republik Indonesia (2000-2001)</li>
+                                    <li>• Menteri Kehakiman dan Hak Asasi Manusia (2001-2002) </li>
+                                    <li>• Ketua Mahkamah Konstitusi (2008-2013) </li>
+                                    <li>• Menteri Koordinator Bidang Politik, Hukum dan Keamanan (2019-2024)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="visimisi-container" class="flex justify-center mt-10 space-x-4 mb-10"></div>
+
+            <script>
+                // Mengambil data JSON dari URL
+                fetch('http://localhost:3000/visiMisi')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Mencari data dengan nomor urut 2
+                        const dataNoUrut3 = data.content.find(item => item.no_urut === 3);
+
+                        if (dataNoUrut3) {
+                            // Mengambil referensi ke elemen div dengan id "visimisi-container"
+                            var container = document.getElementById("visimisi-container");
+
+                            // Membuat elemen div untuk menampilkan visi dan misi
+                            var visiMisiContainer = document.createElement("div");
+                            visiMisiContainer.classList.add("p-4", "border", "rounded", "shadow", "w-full", "max-w-5xl"); // Lebih lebar dengan lebar maksimum xl
+
+                            // Menambahkan visi ke dalam div
+                            var visiElement = document.createElement("p");
+                            visiElement.textContent = "Visi: " + dataNoUrut3.visi;
+                            visiElement.classList.add("text-xl", "font-bold", "mb-4"); // Teks lebih besar dan tebal
+                            visiMisiContainer.appendChild(visiElement);
+
+                            // Menambahkan spasi antara visi dan misi
+                            visiMisiContainer.appendChild(document.createElement("br"));
+
+                            // Menambahkan misi ke dalam div
+                            var misiElement = document.createElement("p");
+                            misiElement.textContent = "Misi:";
+                            misiElement.classList.add("font-semibold", "mb-2"); // Teks misi lebih tebal
+                            visiMisiContainer.appendChild(misiElement);
+
+                            var misiList = document.createElement("ul");
+                            misiList.classList.add("pl-4"); // Tambahkan padding kiri pada daftar misi
+                            dataNoUrut3.misi.forEach(misiItem => {
+                                var misiListItem = document.createElement("li");
+                                misiListItem.textContent = "• " + misiItem;
+                                misiList.appendChild(misiListItem);
+                            });
+                            visiMisiContainer.appendChild(misiList);
+
+                            // Menambahkan div visi dan misi ke dalam container
+                            container.appendChild(visiMisiContainer);
+                        } else {
+                            console.error('Data dengan nomor urut 2 tidak ditemukan');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            </script>
+
+
+            <div id="data-kekayaan-container" class="mx-auto w-3/4 mb-10"></div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", async function () {
+                    try {
+                        const response = await fetch("http://localhost:3000/dataKekayaan");
+                        const data = await response.json();
+
+                        const container = document.getElementById("data-kekayaan-container");
+
+                        // Ambil data untuk calon presiden nomor urut 2 (Prabowo Subianto)
+                        const ganjar = data.calonPresiden.find(calon => calon.nomorUrut === 3);
+
+                        // Buat template HTML untuk menampilkan informasi
+                        const html = `
+                        <div class="border border-gray-400 rounded-md p-8">
+                            <h2 class="text-2xl font-bold">Data Harta Kekayaan</h2>
+                            <p class="mb-4">Menurut Laporan Harta Kekayaan Penyelenggara Negara (LHKPN) per Oktober 2023</p>
+                            <div class="text-lg">
+                                <div class="flex justify-center space-x-9">
+                                    <div class="border border-gray-400 rounded-md p-8">
+                                        <div><strong class="text-xl">${ganjar.presiden}</strong></div>
+                                        <div></div>
+                                        <div><strong>Kekayaan:</strong> Rp${ganjar.kekayaan} Miliar</div>
+                                        <div><strong>KTB:</strong> Rp${ganjar.KTB.toString().replace(/\./g, ",")} Miliar</div>
+                                        <div><strong>KAT:</strong> Rp${ganjar.KAT.toString().replace(/\./g, ",")} Miliar</div>
+                                    </div>
+                                    <div class="border border-gray-400 rounded-md p-8">
+                                        <div><strong class="text-xl">${ganjar.wakilPresiden}</strong></div>
+                                        <div><strong>Kekayaan:</strong> Rp${ganjar.kekayaanWakil.toString().replace(/\./g, ",")} Miliar</div>
+                                        <div><strong>KTB:</strong> Rp${ganjar.KTBWakil.toString().replace(/\./g, ",")} Miliar</div>
+                                        <div><strong>KAT:</strong> Rp${ganjar.KATWakil.toString().replace(/\./g, ",")} Miliar</div>
+                                    </div>
+                                </div>
+                                <div class="flex mt-4">
+                                    <div class="w-2/4 text-sm">
+                                        <h2>*KTB: Kekayaan Tanah dan Bangunan</h2>
+                                        <h2>*KAT: Kekayaan Alat Transportasi</h2>
+                                    </div>
+                                    <div class="border border-gray-400 rounded-md p-4 text-lg">
+                                        <div class="flex items-center justify-center"><strong>Total Kekayaan:</strong> Rp${ganjar.totalKekayaan} Miliar</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                        // Masukkan template HTML ke dalam container
+                        container.innerHTML = html;
+
+                    } catch (error) {
+                        console.error("Error:", error);
+                        container.innerHTML = "<p>Terjadi kesalahan saat memuat data.</p>";
+                    }
+                });
+
+
+            </script>
+
+            <div class="mb-20">
+                <h1 class="text-2xl font-bold mb-4 text-center">Hasil Survei 6 Lembaga Terkait Elektabilitas Pasangan
+                    Capres dan Cawapres</h1>
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- Progress bar 1 -->
+                    <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
+                        <h1 class="mt-2 font-bold">Indonesia Survey Center</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="w-24 h-3 bg-gray-200 rounded-full relative">
+                                <div id="progress1" class="h-full bg-stone-950 rounded-full"></div>
+                            </div>
+                            <span id="progressValue1" class="ml-2">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress bar 2 -->
+                    <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
+                        <h1 class="mt-2 font-bold">Charta Politika</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="w-24 h-3 bg-gray-200 rounded-full relative">
+                                <div id="progress2" class="h-full bg-stone-950 rounded-full"></div>
+                            </div>
+                            <span id="progressValue2" class="ml-2">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress bar 3 -->
+                    <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
+                        <h1 class="mt-2 font-bold">Politracking Indonesia</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="w-24 h-3 bg-gray-200 rounded-full relative">
+                                <div id="progress3" class="h-full bg-stone-950 rounded-full"></div>
+                            </div>
+                            <span id="progressValue3" class="ml-2">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress bar 4 -->
+                    <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
+                        <h1 class="mt-2 font-bold">LSI Denny JA</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="w-24 h-3 bg-gray-200 rounded-full relative">
+                                <div id="progress4" class="h-full bg-stone-950 rounded-full"></div>
+                            </div>
+                            <span id="progressValue4" class="ml-2">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress bar 5 -->
+                    <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
+                        <h1 class="mt-2 font-bold">Indikator Politik Indonesia</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="w-24 h-3 bg-gray-200 rounded-full relative">
+                                <div id="progress5" class="h-full bg-stone-950 rounded-full"></div>
+                            </div>
+                            <span id="progressValue5" class="ml-2">0%</span>
+                        </div>
+                    </div>
+
+                    <!-- Progress bar 6 -->
+                    <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
+                        <h1 class="mt-2 font-bold">SPIN</h1>
+                        <div class="flex items-center mt-2">
+                            <div class="w-24 h-3 bg-gray-200 rounded-full relative">
+                                <div id="progress6" class="h-full bg-stone-950 rounded-full"></div>
+                            </div>
+                            <span id="progressValue6" class="ml-2">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // Fungsi untuk mengatur nilai kemajuan dengan animasi
+            function setProgressBarValue(progressBarId, progressValue) {
+                var progressBar = document.getElementById(progressBarId);
+                var width = 0;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= progressValue) {
+                        clearInterval(id);
+                    } else {
+                        width++;
+                        progressBar.style.width = width + '%';
+                    }
+                }
+            }
+
+            // Panggil fungsi untuk setiap progress bar
+            setProgressBarValue('progress1', 18.1);
+            setProgressBarValue('progress2', 28);
+            setProgressBarValue('progress3', 20.6);
+            setProgressBarValue('progress4', 24.8);
+            setProgressBarValue('progress5', 22);
+            setProgressBarValue('progress6', 23.5);
+        </script>
+
+
+
+        <script>
+            // Set nilai kemajuan secara dinamis untuk progress bar pertama
+            var progressValue1 = 18.1; // Misalnya, atur nilai kemajuan menjadi 50%
+            document.getElementById('progress1').style.width = progressValue1 + '%';
+            document.getElementById('progressValue1').textContent = progressValue1 + '%';
+
+            // Set nilai kemajuan secara dinamis untuk progress bar kedua
+            var progressValue2 = 28; // Misalnya, atur nilai kemajuan menjadi 30%
+            document.getElementById('progress2').style.width = progressValue2 + '%';
+            document.getElementById('progressValue2').textContent = progressValue2 + '%';
+
+            // Set nilai kemajuan secara dinamis untuk progress bar ketiga
+            var progressValue3 = 20.6; // Misalnya, atur nilai kemajuan menjadi 70%
+            document.getElementById('progress3').style.width = progressValue3 + '%';
+            document.getElementById('progressValue3').textContent = progressValue3 + '%';
+
+            // Set nilai kemajuan secara dinamis untuk progress bar keempat
+            var progressValue4 = 24.8; // Misalnya, atur nilai kemajuan menjadi 70%
+            document.getElementById('progress4').style.width = progressValue4 + '%';
+            document.getElementById('progressValue4').textContent = progressValue4 + '%';
+
+            // Set nilai kemajuan secara dinamis untuk progress bar kelima
+            var progressValue5 = 22; // Misalnya, atur nilai kemajuan menjadi 70%
+            document.getElementById('progress5').style.width = progressValue5 + '%';
+            document.getElementById('progressValue5').textContent = progressValue5 + '%';
+
+            // Set nilai kemajuan secara dinamis untuk progress bar keenam
+            var progressValue6 = 23.5; // Misalnya, atur nilai kemajuan menjadi 70%
+            document.getElementById('progress6').style.width = progressValue6 + '%';
+            document.getElementById('progressValue6').textContent = progressValue6 + '%';
+
+            // Lanjutkan untuk progress bar yang lain
+
+        </script>
+
+
+        <style>
+            .berita {
+                transition: transform 0.3s ease;
+            }
+
+            .berita:hover {
+                transform: scale(1.05);
+            }
+        </style>
+        <div class="mb-20">
+            <h2 class="text-2xl font-bold mb-4">Berita terkini terkait Ganjar-Mahfud</h2>
+            <div id="berita-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-screen-md mx-auto"></div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                try {
+                    const response = await fetch('http://localhost:3000/gm'); // Ganti dengan URL endpoint Anda
+                    const data = await response.json();
+
+                    // Panggil fungsi untuk menampilkan data berita di halaman HTML
+                    tampilkanBerita(data);
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+
+            // Fungsi untuk menampilkan data berita di halaman HTML
+            function tampilkanBerita(data) {
+                const beritaContainer = document.getElementById('berita-container');
+
+                // Tambahkan border ke kontainer berita
+                beritaContainer.classList.add('border', 'rounded-md', 'p-4', 'shadow-md');
+
+                // Buat elemen untuk setiap berita dan tambahkan ke dalam kontainer
+                data.forEach(berita => {
+                    if (berita.title && berita.link) {
+                        const beritaElement = document.createElement('div');
+                        beritaElement.classList.add('berita', 'bg-gray-100', 'p-4', 'rounded-md', 'shadow-md', 'border', 'border-gray-300', 'mb-4');
+
+                        // Buat elemen untuk judul dan tambahkan link dengan target _blank
+                        const judulElement = document.createElement('a');
+                        judulElement.href = berita.link;
+                        judulElement.textContent = berita.title;
+                        judulElement.target = "_blank"; // Link akan dibuka di tab baru
+                        judulElement.classList.add('font-bold', 'text-lg', 'mb-2', 'block');
+
+                        // Buat elemen untuk contentSnippet
+                        const contentSnippetElement = document.createElement('p');
+                        contentSnippetElement.textContent = berita.contentSnippet;
+                        contentSnippetElement.classList.add('text-sm', 'text-gray-700');
+
+                        // Mengubah format isoDate
+                        const isoDate = new Date(berita.isoDate).toISOString().split('T')[0];
+
+                        // Buat elemen untuk isoDate
+                        const isoDateElement = document.createElement('p');
+                        isoDateElement.textContent = isoDate;
+                        isoDateElement.classList.add('text-sm', 'text-gray-500', 'mt-2');
+
+                        // Tambahkan elemen ke dalam elemen berita
+                        beritaElement.appendChild(judulElement);
+                        beritaElement.appendChild(contentSnippetElement);
+                        beritaElement.appendChild(isoDateElement);
+
+                        // Tambahkan elemen berita ke dalam kontainer
+                        beritaContainer.appendChild(beritaElement);
+                    }
+                });
+            }
+        </script>
+
+
+</body>
+
+</html>

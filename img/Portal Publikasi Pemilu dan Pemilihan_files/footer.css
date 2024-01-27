@@ -1,0 +1,165 @@
+.container-fluid {
+  background-color: black;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0px !important;
+  position: relative;
+  padding: 120px 80px 23.5px 80px;
+  bottom: 0 !important
+}
+
+@media screen and (max-width: 576px) {
+  .container-fluid {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px
+  }
+}
+
+.form-card input {
+  padding: 5px 2px 3px 2px;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 0px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 20px;
+  letter-spacing: 1px
+}
+
+.form-card input:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+  border-bottom: 1px solid white;
+  outline-width: 0
+}
+
+.row-1 {
+  border: 1px solid #F57C00;
+  background-color: #fff;
+  position: absolute;
+  top: -100px;
+  margin-right: 65px
+}
+
+@media screen and (max-width: 576px) {
+  .row-1 {
+    margin-right: 5px;
+    padding-left: 10px
+  }
+
+  .form-card input {
+    margin-left: 10px
+  }
+}
+
+.heading {
+  color: #F57C00
+}
+
+.btn-orange {
+  background-color: #F57C00;
+  color: #fff !important;
+  height: 40px;
+  padding: 2px 10px 6px 10px !important
+}
+
+.img-1 {
+  width: 120px;
+  height: 120px;
+  margin-top: 16px;
+  margin-bottom: 5px
+}
+
+@media screen and (max-width: 576px) {
+  .img-1 {
+    visibility: hidden
+  }
+}
+
+.row-2 {
+  border: 1px solid #F57C00;
+  background-color: #FB8C00;
+  color: #fff;
+  padding-top: 10px;
+  position: relative;
+  margin-bottom: 20px
+}
+
+.block-item {
+  text-align: center;
+  width: 20%;
+  margin-top: 20px;
+  padding-left: 3px;
+  padding-right: 3px
+}
+
+@media screen and (max-width: 576px) {
+  .block-item {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto
+  }
+}
+
+.fa {
+  font-size: 30px
+}
+
+.desc {
+  font-size: 14px
+}
+
+.block-footer {
+  padding-bottom: 20px
+}
+
+.footer-headings {
+  color: #fff;
+  border-bottom: 1px white solid;
+  padding-bottom: 10px
+}
+
+.list-items {
+  color: #fff;
+  margin-bottom: 0px;
+  font-size: 14px
+}
+
+@media screen and (max-width: 576px) {
+  .block-footer {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto
+  }
+}
+
+.img-g {
+  width: 120px;
+  height: 50px
+}
+
+.border-left {
+  border-left: white 1px solid !important;
+  padding-left: 20px !important
+}
+
+@media screen and (max-width: 576px) {
+  .border-left {
+    border-left: none !important;
+    padding-left: 0 !important
+  }
+}
+
+.fa-sm {
+  font-size: 15px;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px
+}
