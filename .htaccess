@@ -1,5 +1,28 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
-DirectoryIndex disabled
+<IfModule mod_rewrite.c> 
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On 
+RewriteBase /
+
+#www to non
+RewriteCond %{HTTP_HOST} ^www\.(([a-z0-9_]+\.)?domain\.com)$ [NC]
+RewriteRule ^(.+?)/?$ http://%1/$1/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html/?[\s?] [NC]
+RewriteRule ^ /%1/ [R=301,NE,L]
+
+#index redirect 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ 
+RewriteRule ^index\.html$ http://%{HTTP_HOST}/ [R=301,L]
+
+# add a trailing slash to non files
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*?[^/])$ %{REQUEST_URI}/ [L,R=301,NE]
+
+# add html internally
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([^.]+)/$ $1.html [L]
+
+</IfModule>
