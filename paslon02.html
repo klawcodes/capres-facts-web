@@ -104,7 +104,7 @@
 
             <script>
                 // Mengambil data JSON dari URL
-                fetch('http://localhost:3000/visiMisi')
+                fetch('https://capresfacts.cyclic.app/visiMisi')
                     .then(response => response.json())
                     .then(data => {
                         // Mencari data dengan nomor urut 2
@@ -155,7 +155,7 @@
             <script>
                 document.addEventListener("DOMContentLoaded", async function () {
                     try {
-                        const response = await fetch("http://localhost:3000/dataKekayaan");
+                        const response = await fetch("https://capresfacts.cyclic.app/dataKekayaan");
                         const data = await response.json();
 
                         const container = document.getElementById("data-kekayaan-container");
@@ -368,7 +368,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', async () => {
                 try {
-                    const response = await fetch('http://localhost:3000/pg'); // Ganti dengan URL endpoint Anda
+                    const response = await fetch('https://capresfacts.cyclic.app/pg'); // Ganti dengan URL endpoint Anda
                     const data = await response.json();
 
                     // Panggil fungsi untuk menampilkan data berita di halaman HTML
