@@ -7,21 +7,25 @@
     <title>./Capres Facts</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 
 <body>
-    <div class="h-screen flex justify-center items-center">
-        <div class="max-[640px]:mt-[600px]">
+    <!-- Tambahkan div untuk menampilkan teks "Work in progress" -->
+    <div id="hide" class="h-screen flex justify-center items-center">
+        <div class="max-[640px]:mt-[600px]"> 
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <h1 class="text-5xl font-bold mr-auto mb-10 max-[640px]:text-4xl max-[640px]:mr-5">./Capres Facts</h1>
+                    <h1 class="text-5xl font-bold mr-auto mb-10 max-[640px]:text-4xl max-[640px]:mr-5">./Capres Facts
+                    </h1>
                 </div>
                 <p class="ml-auto mt-2 mr-2 mb-7 max-[640px]:mr-10">Made by Klaw<br> under RIOT REVENGER</p>
             </div>
-            
+
             <div class="image flex justify-center foto-paslon flex-col sm:flex-row ">
                 <i class='bx bx-hot'></i>
-                <a href="./paslon01.html" class="m-4 flex flex-col items-center border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transform transition duration-300 hover:scale-110 max-[640px]:w-[270px]">
+                <a href="./paslon01.html"
+                    class="m-4 flex flex-col items-center border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transform transition duration-300 hover:scale-110 max-[640px]:w-[270px]">
                     <h1 class="text-2xl mb-4">Paslon No. Urut 01</h1>
                     <img src="img/paslon1.jpeg" alt="" class="mb-4">
                     <div class="nama-paslon text-center font-bold">
@@ -29,8 +33,9 @@
                         <h2>Dr. (H.C.) H. A. MUHAIMIN ISKANDAR</h2>
                     </div>
                 </a>
-            
-                <a href="./paslon02.html" class="m-4 flex flex-col items-center border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transform transition duration-300 hover:scale-110 max-[640px]:w-[270px]">
+
+                <a href="./paslon02.html"
+                    class="m-4 flex flex-col items-center border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transform transition duration-300 hover:scale-110 max-[640px]:w-[270px]">
                     <h1 class="text-2xl mb-4">Paslon No. Urut 02</h1>
                     <img src="img/paslon2.jpeg" alt="" class="mb-4">
                     <div class="nama-paslon text-center font-bold">
@@ -38,8 +43,9 @@
                         <h2>GIBRAN RAKABUMING RAKA</h2>
                     </div>
                 </a>
-            
-                <a href="./paslon03.html" class="m-4 flex flex-col items-center border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transform transition duration-300 hover:scale-110 max-[640px]:w-[270px]">
+
+                <a href="./paslon03.html"
+                    class="m-4 flex flex-col items-center border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transform transition duration-300 hover:scale-110 max-[640px]:w-[270px]">
                     <h1 class="text-2xl mb-4">Paslon No. Urut 03</h1>
                     <img src="img/paslon3.jpeg" alt="" class="mb-4">
                     <div class="nama-paslon text-center font-bold">
@@ -51,6 +57,38 @@
         </div>
     </div>
 
+    <!-- Teks "Work in progress" akan muncul di sini -->
+    <div class="justify-center items-center mt-[10%] max-[640px]:mt-[50%]">
+        <div class="flex justify-center items-center mb-10">
+            <img src="https://pbs.twimg.com/media/GDrVPuMasAAB1YQ?format=jpg&name=900x900" class="w-[250px] h-auto" alt="">
+        </div>
+        <div class="flex justify-center items-center">
+            <h1 id="typed-text" class="text-3xl text-gray-600 font-bold "></h1>
+        </div>
+        <div class="flex justify-center items-center">
+            <h1 class="text-gray-600 text-sm">made by klaw under riot revenger exclusive agreements</h1>
+        </div>
+    </div>
+
+    <script>
+
+        var typed = new Typed('#typed-text', {
+            strings: ['./Work in progress by yours truly'],
+            typeSpeed: 50,
+        });
+        
+    </script>
+
+    <script>
+        // Ambil elemen div yang ingin disembunyikan
+const divToHide = document.getElementById("hide"); 
+
+// Sembunyikan div tersebut
+divToHide.style.display = "none";
+
+// Atau gunakan class untuk menyembunyikannya
+divToHide.classList.add("hidden");
+    </script>
 
 </body>
 

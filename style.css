@@ -5,6 +5,10 @@ body{
     overflow-x: hidden;
 }
 
+.hide {
+    display: none;
+}
+
 .zoom-in {
     transition: transform 0.2s;
 }
