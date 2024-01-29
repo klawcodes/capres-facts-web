@@ -174,7 +174,7 @@
 
 
             <script>
-                fetch('http://localhost:3000/visiMisiDC')
+                fetch('https://capresfactsapi.cyclic.app/visimisidc')
                     .then(response => response.json())
                     .then(data => {
                         var debates = data.debates;
@@ -225,7 +225,6 @@
                         });
                     })
                     .catch(error => console.error('Error:', error));
-
 
             </script>
 
