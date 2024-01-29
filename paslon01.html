@@ -37,6 +37,8 @@
                     <ul class="space-y-4 text-center">
                         <li class="hover:transform transition duration-150 hover:scale-110"><a href="./"
                                 class="text-gray-600 hover:text-gray-900 text-3xl">Home</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./about.html"
+                                class="text-gray-600 hover:text-gray-900 text-3xl">About</a></li>
                         <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon01.html"
                                 class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 01</a></li>
                         <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon02.html"
@@ -164,8 +166,8 @@
 
             <div class="flex flex-col justify-center items-center mb-10 border border-gray-300 rounded-2xl">
                 <div class="judul text-center mb-4 mt-4">
-                    <i class="fa-solid fa-note-sticky"></i>
-                    <h1 class="text-2xl font-bold">Poin Penting Visi Misi pada Debat Capres</h1>
+                    <i class="fa-solid fa-note-sticky text-2xl"></i>
+                    <h1 class="text-2xl font-bold max-[360px]:text-xl">Poin Penting Visi Misi pada Debat Capres dan Cawapres</h1>
                 </div>
                 <div id="visimisidc" class="grid grid-cols-1 mx-auto md:grid-cols-3 gap-4 w-[90%]"></div>
             </div>
@@ -190,7 +192,7 @@
 
                             if (capresOnePoints) {
                                 var divDebate = document.createElement('div');
-                                divDebate.classList.add('kotak', 'bg-gray-100', 'p-4', 'mb-4', "rounded-2xl ");
+                                divDebate.classList.add('kotak', 'bg-gray-100', 'p-4', 'mb-4', 'rounded-2xl');
 
                                 var judulUtama = document.createElement('h2');
                                 judulUtama.classList.add('text-lg', 'font-bold', 'mb-2');
@@ -227,9 +229,8 @@
                     .catch(error => console.error('Error:', error));
 
             </script>
-
-
-            <div id="data-kekayaan-container" class="mx-auto w-3/4 mb-10"></div>
+             
+                <div id="data-kekayaan-container" class="mx-auto w-3/4 mb-10"></div>
 
             <script>
                 document.addEventListener("DOMContentLoaded", async function () {
@@ -245,6 +246,7 @@
                         // Buat template HTML untuk menampilkan informasi
                         const html = `
                         <div class="border border-gray-400 rounded-md p-8">
+                            <i class="fa-solid fa-money-bill text-2xl"></i>
                             <h2 class="text-2xl font-bold">Data Harta Kekayaan</h2>
                             <p class="mb-4">Menurut Laporan Harta Kekayaan Penyelenggara Negara (LHKPN) per Oktober 2023</p>
                             <div class="text-lg">
@@ -291,10 +293,10 @@
 
             </script>
 
-            <div class="mb-20 ">
-                <h1 class="text-2xl font-bold mb-4 text-center max-[640px]:text-xl">Hasil Survei 6 Lembaga Terkait
+            <div class="mb-20">
+                <h1 class="text-2xl font-bold mb-4 text-center max-[640px]:text-xl"><i class="fa-solid fa-square-poll-vertical text-2xl mr-5"></i>Hasil Survei 6 Lembaga Terkait
                     Elektabilitas Pasangan
-                    Capres dan Cawapres</h1>
+                    Capres dan Cawapres </h1>
                 <div class="grid grid-cols-3 gap-4 max-[640px]:grid-cols-1 max-[640px]:w-[80%] mx-auto">
                     <!-- Progress bar 1 -->
                     <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
@@ -439,6 +441,7 @@
             }
         </style>
         <div class="mb-20 justify-center text-center">
+            <i class="fa-solid fa-newspaper text-2xl"></i>
             <h2 class="text-2xl font-bold mb-4">Berita terkini terkait Anies-Muhaimin</h2>
             <div id="berita-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-screen-md mx-auto"></div>
         </div>
