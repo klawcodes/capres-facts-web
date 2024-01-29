@@ -12,43 +12,59 @@
 <body>
     <div class="flex flex-col justify-center items-center">
         <div class="max-w-screen-xl mt-10">
-            <div class="mb-10 sticky top-0 bg-white z-50 w-full flex justify-between items-center px-6 py-4 shadow-lg">
+            <div class="mb-10 
+            sticky top-0 
+            bg-white 
+            z-50 
+            w-full 
+            flex 
+            justify-between 
+            items-center 
+            px-6 
+            py-4 
+            shadow-lg">
                 <div class="">
-                    <h1 class="text-6xl font-bold mr-auto">./Capres Facts</h1>
+                    <h1 class="text-6xl font-bold mr-auto 
+                    max-[640px]:text-4xl
+                    max-[414px]:text-3xl">./Capres Facts</h1>
                 </div>
                 <button id="hamburger-btn" class="block focus:outline-none">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </button>                
+                </button>
                 <div id="menu" class="menu drop-shadow-md">
                     <ul class="space-y-4 text-center">
-                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./index.html" class="text-gray-600 hover:text-gray-900 text-3xl">Home</a></li>
-                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon01.html" class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 01</a></li>
-                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon02.html" class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 02</a></li>
-                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon03.html" class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 03</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./"
+                                class="text-gray-600 hover:text-gray-900 text-3xl">Home</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon01.html"
+                                class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 01</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon02.html"
+                                class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 02</a></li>
+                        <li class="hover:transform transition duration-150 hover:scale-110"><a href="./paslon03.html"
+                                class="text-gray-600 hover:text-gray-900 text-3xl">Paslon 03</a></li>
                         <!-- Tambahkan lebih banyak item menu sesuai kebutuhan -->
                     </ul>
                 </div>
             </div>
-            
+
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     const hamburgerBtn = document.getElementById('hamburger-btn');
                     const menu = document.getElementById('menu');
-            
+
                     hamburgerBtn.addEventListener('click', function () {
                         menu.classList.toggle('active');
                         hamburgerBtn.classList.toggle('open');
                     });
                 });
             </script>
-            
-            <div class="flex items-center justify-center mb-10">
 
-                <div class="flex justify-center items-center mr-20">
+            <div class="flex items-center justify-center mb-10 max-[640px]:flex-col container mx-auto">
+
+                <div class="flex justify-center items-center mr-20 max-[640px]:container max-[640px]:mx-auto">
                     <div class="flex flex-col items-center">
-                        <img src="img/paslon1.jpeg" alt="" class="mb-4">
+                        <img src="img/paslon1.jpeg" alt="" class="mb-4 max-[390px]:w-[350px]">
                         <div class="flex items-center justify-center">
                             <img src="https://infopemilu.kpu.go.id//berkas-sipol/parpol/profil/gambar_parpol/1656224727_Logo%20NasDem%20KPU.png"
                                 alt="" class="w-10 mx-2" title="Partai Nasdem">
@@ -60,10 +76,10 @@
                     </div>
                 </div>
 
-                <div class="biografi-paslon">
+                <div class="biografi-paslon max-[640px]:m-5 max-[360px]:m-10">
                     <div class="mb-5">
-                        <h1 class="font-bold text-3xl">Anies Baswedan (Calon Presiden)</h1>
-                        <ul>
+                        <h1 class="font-bold text-3xl max-[640px]:text-2xl">Anies Baswedan (Calon Presiden)</h1>
+                        <ul class="w-[90%]">
                             <li><strong>Nama Lengkap:</strong> Anies Rasyid Baswedan</li>
                             <li><strong>Tempat, Tanggal Lahir:</strong> Kuningan, 7 Mei 1969</li>
                             <li><strong>Usia:</strong> 54 tahun</li>
@@ -77,8 +93,8 @@
                         </ul>
                     </div>
                     <div>
-                        <h1 class="font-bold text-2xl">Muhaimin Iskandar (Calon Wakil Presiden)</h1>
-                        <ul>
+                        <h1 class="font-bold text-2xl max-[640px]:text-xl">Muhaimin Iskandar (Calon Wakil Presiden)</h1>
+                        <ul class="w-[90%]">
                             <li><strong>Nama Lengkap:</strong> Abdul Muhaimin Iskandar</li>
                             <li><strong>Tempat, Tanggal Lahir:</strong> Jombang, 24 September 1966</li>
                             <li><strong>Usia:</strong> 57 tahun</li>
@@ -111,7 +127,7 @@
 
                             // Membuat elemen div untuk menampilkan visi dan misi
                             var visiMisiContainer = document.createElement("div");
-                            visiMisiContainer.classList.add("p-4", "border", "rounded", "shadow", "w-full", "max-w-5xl"); // Lebih lebar dengan lebar maksimum xl
+                            visiMisiContainer.classList.add("p-4", "border", "rounded", "shadow", "w-full", "max-w-5xl", "max-[640px]:max-w-[90%]", "max-[360px]:max-w-[80%]"); // Lebih lebar dengan lebar maksimum xl
 
                             // Menambahkan visi ke dalam div
                             var visiElement = document.createElement("p");
@@ -166,7 +182,7 @@
                             <h2 class="text-2xl font-bold">Data Harta Kekayaan</h2>
                             <p class="mb-4">Menurut Laporan Harta Kekayaan Penyelenggara Negara (LHKPN) per Oktober 2023</p>
                             <div class="text-lg">
-                                <div class="flex justify-center space-x-9">
+                                <div class="flex justify-center items-center space-x-5 max-[640px]:space-y-5 max-[640px]:space-x-0 max-[640px]:flex-col ">
                                     <div class="border border-gray-400 rounded-md p-8">
                                         <div><strong class="text-xl">${anies.presiden}</strong></div>
                                         <div></div>
@@ -181,8 +197,11 @@
                                         <div><strong>KAT:</strong> Rp${anies.KATWakil.toString().replace(/\./g, ",")} Miliar</div>
                                     </div>
                                 </div>
-                                <div class="flex mt-4">
-                                    <div class="w-2/4 text-sm">
+                                <div class="flex mt-4 
+                                max-[640px]:flex-col 
+                                justify-center 
+                                text-center">
+                                    <div class="w-2/4 text-sm max-[640px]:w-[100%] max-[360px]:w-[100%] max-[640px]:mb-7">
                                         <h2>*KTB: Kekayaan Tanah dan Bangunan</h2>
                                         <h2>*KAT: Kekayaan Alat Transportasi</h2>
                                     </div>
@@ -206,10 +225,11 @@
 
             </script>
 
-            <div class="mb-20">
-                <h1 class="text-2xl font-bold mb-4 text-center">Hasil Survei 6 Lembaga Terkait Elektabilitas Pasangan
+            <div class="mb-20 ">
+                <h1 class="text-2xl font-bold mb-4 text-center max-[640px]:text-xl">Hasil Survei 6 Lembaga Terkait
+                    Elektabilitas Pasangan
                     Capres dan Cawapres</h1>
-                <div class="grid grid-cols-3 gap-4">
+                <div class="grid grid-cols-3 gap-4 max-[640px]:grid-cols-1 max-[640px]:w-[80%] mx-auto">
                     <!-- Progress bar 1 -->
                     <div class="flex flex-col items-center zoom-in border border-gray-300 p-4 rounded-lg">
                         <h1 class="mt-2 font-bold">Indonesia Survey Center</h1>
@@ -352,7 +372,7 @@
                 transform: scale(1.05);
             }
         </style>
-        <div class="mb-20">
+        <div class="mb-20 justify-center text-center">
             <h2 class="text-2xl font-bold mb-4">Berita terkini terkait Anies-Muhaimin</h2>
             <div id="berita-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-screen-md mx-auto"></div>
         </div>
@@ -374,7 +394,7 @@
                 const beritaContainer = document.getElementById('berita-container');
 
                 // Tambahkan border ke kontainer berita
-                beritaContainer.classList.add('border', 'rounded-md', 'p-4', 'shadow-md');
+                beritaContainer.classList.add('border', 'rounded-md', 'p-4', 'shadow-md', 'max-[640px]:w-[80%]');
 
                 // Buat elemen untuk setiap berita dan tambahkan ke dalam kontainer
                 data.forEach(berita => {
@@ -414,6 +434,47 @@
             }
         </script>
 
+        <button id="scrollToTopBtn"
+            class="fixed bottom-6 right-6 bg-gray-800 text-white px-4 py-2 rounded-full shadow-md hidden flex items-center justify-center">
+            <i class="fa-solid fa-arrow-up text-3xl"></i> <!-- Ubah ukuran ikon di sini -->
+        </button>
+
+        <style>
+            /* Style tambahan untuk ikon */
+            .fa-arrow-up {
+                /* Anda dapat menyesuaikan ukuran, warna, dll sesuai kebutuhan */
+                color: white;
+                /* Warna ikon */
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+                var icon = scrollToTopBtn.querySelector('i');
+
+                window.addEventListener('scroll', function () {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.classList.remove('hidden');
+                    } else {
+                        scrollToTopBtn.classList.add('hidden');
+                    }
+                });
+
+                icon.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                
+            });
+        </script>
+
+
+
+        <script src="https://kit.fontawesome.com/54442aa5b3.js" crossorigin="anonymous"></script>
 
 </body>
 
