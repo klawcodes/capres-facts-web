@@ -12,7 +12,6 @@ html, body{
 .header-container {
     position: sticky;
     top: 0;
-    z-index: 999;
 }
 
 .zoom-in {
@@ -110,6 +109,3 @@ html, body{
 #hamburger-btn.open .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
-
-
-  
