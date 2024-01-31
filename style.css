@@ -2,7 +2,7 @@
 
 html, body{
     font-family: 'Anonymous Pro';
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 .hide {
