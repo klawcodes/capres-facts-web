@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='robots' content='index,follow'>
     <meta name='copyright' content='Klaw 2024, under RIOT REVENGER Exclusive Agreements.'>
-    <meta name='description' content='Capres Facts adalah platform yang menampilkan fakta-fakta tentang calon presiden (capres) yang akan mencalonkan diri pada tahun 2024. Dibuat oleh Muhammad Dimas alias Klaw dengan izin eksklusif dari RIOT REVENGER, situs ini menjadi sumber informasi terpercaya tentang latar belakang, visi, dan program para calon presiden. Dari profil hingga rekam jejak, Capres Facts hadir dengan data aktual dan relevan bagi pemilih yang ingin membuat keputusan yang cerdas. Saya sangat senang hati menerima kritik dan saran Anda untuk meningkatkan layanan kami.'>
-    <meta name='subject' content='Informasi tentang calon presiden (capres) yang akan mencalonkan diri pada tahun 2024.'>
-    <meta name='keywords' content='Capres Facts, fakta capres, calon presiden 2024, Muhammad Dimas, Klaw, RIOT REVENGER, pemilihan presiden, profil capres, program capres, informasi politik, kritik, saran'>
+    <meta name='description'
+        content='Capres Facts adalah platform yang menampilkan fakta-fakta tentang calon presiden (capres) yang akan mencalonkan diri pada tahun 2024. Dibuat oleh Muhammad Dimas alias Klaw dengan izin eksklusif dari RIOT REVENGER, situs ini menjadi sumber informasi terpercaya tentang latar belakang, visi, dan program para calon presiden. Dari profil hingga rekam jejak, Capres Facts hadir dengan data aktual dan relevan bagi pemilih yang ingin membuat keputusan yang cerdas. Saya sangat senang hati menerima kritik dan saran Anda untuk meningkatkan layanan kami.'>
+    <meta name='subject'
+        content='Informasi tentang calon presiden (capres) yang akan mencalonkan diri pada tahun 2024.'>
+    <meta name='keywords'
+        content='Capres Facts, fakta capres, calon presiden 2024, Muhammad Dimas, Klaw, RIOT REVENGER, pemilihan presiden, profil capres, program capres, informasi politik, kritik, saran'>
     <meta name='author' content='Klaw, fromrevenger@gmail.com'>
     <meta name='url' content='https://www.capresfacts.site'>
     <meta name='pagename' content='Capres Facts - Informasi tentang Calon Presiden 2024'>
@@ -180,11 +183,12 @@
                     })
                     .catch(error => console.error('Error:', error));
             </script>
-            
+
             <div class="flex flex-col justify-center items-center mb-10 border border-gray-300 rounded-2xl">
                 <div class="judul text-center mb-4 mt-4">
                     <i class="fa-solid fa-note-sticky text-2xl"></i>
-                    <h1 class="text-2xl font-bold max-[360px]:text-xl">Poin Penting Visi Misi pada Debat Capres dan Cawapres</h1>
+                    <h1 class="text-2xl font-bold max-[360px]:text-xl">Poin Penting Visi Misi pada Debat Capres dan
+                        Cawapres</h1>
                 </div>
                 <div id="visimisidc" class="grid grid-cols-1 mx-auto md:grid-cols-3 gap-4 w-[90%]"></div>
             </div>
@@ -245,6 +249,85 @@
                     })
                     .catch(error => console.error('Error:', error));
 
+            </script>
+
+            <div id="janjiPaslon" class="mx-auto w-3/4 mb-10"></div>
+
+            <script>
+                // Mengambil data dari API
+                fetch('https://capresfactsapi.cyclic.app/janjiPaslon')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Mendapatkan janji dari Capres No: 1
+                        const janjiCapres1 = data['Capres No: 2'].Janji;
+
+                        // Mendapatkan elemen dengan id "janjiPaslon"
+                        const janjiPaslonElement = document.getElementById('janjiPaslon');
+
+                        // Membuat kontainer untuk menampilkan janji
+                        const janjiContainer = document.createElement('div');
+                        janjiContainer.classList.add('flex', 'flex-col', 'items-start', 'border', 'border-gray-300', 'p-4', 'rounded-md', 'shadow-md');
+
+                        // Menambahkan subjudul
+                        const subJudulElement = document.createElement('p');
+                        subJudulElement.textContent = 'Selama kampanye pemilu 2024, calon presiden banyak menjanjikan berbagai hal pada rakyat Indonesia. Berikut adalah catatan beberapa janji kampanye yang sudah diutarakan oleh paslon selama masa kampanye 2024.';
+                        subJudulElement.classList.add('mb-10', 'text-[15px]', 'font-medium', 'text-center');
+                        janjiContainer.appendChild(subJudulElement);
+
+                        // Menambahkan janji ke dalam kontainer
+                        janjiCapres1.forEach((janji, index) => {
+                            // Membuat elemen untuk judul (title) beserta ikon pada judul pertama saja
+                            const judulElement = document.createElement('h2');
+                            judulElement.classList.add('text-lg', 'font-semibold', 'mb-2');
+
+                            // Menambahkan teks judul
+                            judulElement.insertAdjacentHTML('beforeend', janji.title); // Menambahkan teks judul setelah ikon
+
+                            // Membuat elemen untuk deskripsi (description)
+                            const deskripsiElement = document.createElement('p');
+                            deskripsiElement.textContent = janji.description;
+                            deskripsiElement.classList.add('mb-4');
+
+                            // Membuat kontainer untuk setiap janji
+                            const janjiItemContainer = document.createElement('div');
+                            janjiItemContainer.classList.add('flex', 'flex-col', 'mb-4');
+
+                            // Menambahkan judul dan deskripsi ke dalam kontainer janji
+                            janjiItemContainer.appendChild(judulElement);
+                            janjiItemContainer.appendChild(deskripsiElement);
+
+                            // Menambahkan kontainer janji ke dalam kontainer utama
+                            janjiContainer.appendChild(janjiItemContainer);
+                        });
+
+                        // Menambahkan kontainer utama ke dalam elemen "janjiPaslon"
+                        janjiPaslonElement.appendChild(janjiContainer);
+
+                        // Membuat elemen untuk judul utama
+                        const judulUtamaElement = document.createElement('h1');
+                        judulUtamaElement.classList.add('text-[2rem]', 'font-bold', 'mb-3', 'text-center');
+
+                        // Membuat ikon untuk judul utama
+                        const ikonUtamaElement = document.createElement('i');
+                        ikonUtamaElement.classList.add('fas', 'fa-candy-cane', 'mr-2'); // Menambahkan kelas ikon dan margin-right
+
+                        // Menambahkan ikon ke dalam elemen judul utama
+                        judulUtamaElement.appendChild(ikonUtamaElement);
+
+                        // Menambahkan teks judul setelah ikon
+                        judulUtamaElement.insertAdjacentText('beforeend', 'Janji - Janji Capres');
+
+
+                        // Membuat kotak border abu-abu menggunakan Tailwind
+                        const borderBox = document.createElement('div');
+                        borderBox.classList.add('border', 'border-gray-300', 'rounded-md', 'p-4');
+                        borderBox.appendChild(judulUtamaElement); // Menambahkan judul utama ke dalam kotak border
+                        borderBox.appendChild(janjiContainer); // Menambahkan kontainer utama ke dalam kotak border
+
+                        // Memasukkan kotak border ke dalam elemen "janjiPaslon"
+                        janjiPaslonElement.appendChild(borderBox);
+                    })
+                    .catch(error => console.error('Error:', error));
             </script>
 
             <div id="data-kekayaan-container" class="mx-auto w-3/4 mb-10"></div>
@@ -317,7 +400,8 @@
             </script>
 
             <div class="mb-20">
-                <h1 class="text-2xl font-bold mb-4 text-center  max-[640px]:text-xl"><i class="fa-solid fa-square-poll-vertical text-2xl mr-5"></i>Hasil Survei 6 Lembaga Terkait
+                <h1 class="text-2xl font-bold mb-4 text-center  max-[640px]:text-xl"><i
+                        class="fa-solid fa-square-poll-vertical text-2xl mr-5"></i>Hasil Survei 6 Lembaga Terkait
                     Elektabilitas Pasangan
                     Capres dan Cawapres</h1>
                 <div class="grid grid-cols-3 gap-4 max-[640px]:grid-cols-1 max-[640px]:w-[80%] mx-auto">
